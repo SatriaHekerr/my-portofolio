@@ -336,3 +336,42 @@ html {
 section {
   scroll-margin-top: 80px; 
 }
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* Pastikan gambar tidak keluar dari sudut bulat */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative; /* Penting untuk animasi */
+
+    /* ----- Efek Animasi Awal ----- */
+    opacity: 0; /* Mulai tersembunyi */
+    transform: translateY(50px); /* Mulai 50px di bawah posisi akhir */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transisi halus */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 220px; /* Tinggi gambar tetap */
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa terdistorsi */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+}
+
+.item-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.item-info h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.item-info p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
