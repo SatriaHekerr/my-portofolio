@@ -336,3 +336,35 @@ html {
 section {
   scroll-margin-top: 80px; 
 }
+
+/* --- Terapkan Animasi --- */
+
+/* 1. Set kondisi awal agar elemen tersembunyi dulu */
+.hero-title,
+.hero-description,
+.btn-project {
+  opacity: 0; /* PENTING: Sembunyikan dulu sebelum animasi mulai */
+  /* Gunakan 'forwards' agar setelah animasi selesai, elemen tetap di kondisi akhir (terlihat) */
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; /* Gerakan melambat di akhir */
+  animation-duration: 0.8s; /* Durasi animasi 0.8 detik */
+}
+
+/* 2. Terapkan nama animasi dan delay */
+
+/* Elemen Nama: Muncul pertama */
+.hero-title {
+  animation-name: fadeInUp;
+}
+
+/* Elemen Deskripsi: Muncul kedua (delay 0.3 detik) */
+.hero-description {
+  animation-name: fadeInUp;
+  animation-delay: 0.3s;
+}
+
+/* Elemen Tombol: Muncul terakhir (delay 0.6 detik) */
+.btn-project {
+  animation-name: fadeInUp;
+  animation-delay: 0.6s;
+}
