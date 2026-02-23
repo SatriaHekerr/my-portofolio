@@ -328,3 +328,11 @@ footer {
     transform: translateX(-50%); /* Moves exactly half the width */
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; 
+}
